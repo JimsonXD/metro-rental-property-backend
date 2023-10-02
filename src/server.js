@@ -5,9 +5,9 @@ const app = express();
 
 require('dotenv').config();
 
-const PORT = 8080;
-const MONGODB_URI = 'mongodb://mongodb:27017/mydb';
-const CORS_ORIGIN = 'http://localhost:3000';
+const PORT = process.env.PORT || 8080;
+const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/mydb';
+const CORS_ORIGIN = process.env.CORS_ORIGIN || 'http://localhost:3000';
 
 const corsOptions = {
   origin: CORS_ORIGIN,
